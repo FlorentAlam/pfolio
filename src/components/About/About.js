@@ -1,6 +1,8 @@
 import React, { useContext, useEffect } from 'react';
 import lang from '../../utils/lang';
 import { LangContext } from '../App/AppProvider';
+import photo from '../../assets/photo_jpg.jpg';
+import './About.scss';
 
 const About = () => {
 
@@ -11,8 +13,9 @@ const About = () => {
     }, [])
 
     return(
-        <main className="page">
-
+        <main className="page about">
+            <h1>Et si on travaillais ensemble ?</h1>
+            {/* <img src={photo}></img> */}
         </main>
     )
 };

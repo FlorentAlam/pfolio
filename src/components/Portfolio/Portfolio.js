@@ -63,18 +63,22 @@ const Portfolio = () => {
             <div className="portfolio__item-container" style={{transform: `translateX(${- window.innerWidth * selected}px)`}}>
                 {projects.map((projet, index) => (
                     <article key={index} style={{transform: `translateX(${index * window.innerWidth}px)`}}>
-                        <img src={projet.img} alt={projet.name}/>
+                        <div className="portfolio__image" style={{backgroundImage: `url(${projet.img})`}}></div>
                         <div>
                             <h2 className="title">{projet.name}</h2>
                             <p className="description">{lang.portfolio[projet.name][langage.langage]}</p>
-                            <p className="tech">{projet.techs.join(', ')}</p>
+                            <p className="tech">
+                                {projet.techs.map((tech, index) => (
+                                    <span>{tech}</span>
+                                ))}
+                            </p>
                         </div>
                     </article>
                 ))}
             </div>
             <div className="portfolio__selected-indicator-container">
                 {projects.map((projet, index) => (
-                    <div className={"portfolio__selected-indicator " + (index === selected ? "selected" : "unselected")}>
+                    <div onClick={() => setSelected(index)} className={"portfolio__selected-indicator " + (index === selected ? "selected" : "unselected")}>
                     </div>
                 ))}
             </div>
