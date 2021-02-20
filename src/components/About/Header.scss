@@ -1,0 +1,89 @@
+.about-header{
+    font-family: "Kumbh Bold";
+    text-transform: uppercase;
+    font-weight: bold;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    span{
+        animation-duration: .5s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+    }
+    span:first-child{
+        transform: translateX(-100vw);
+        animation-name: firstAnim;
+        animation-delay: .2s;
+    }
+    span:nth-child(2){
+        transform: translateX(100vw);
+        animation-name: secondAnim;
+        animation-delay: .4s;
+    }
+    span:nth-child(3){
+        transform: translateX(-100vw);
+        animation-name: thirdAnim;
+        animation-delay: .6s;
+        animation-duration: 1s;
+    }
+}
+
+@media screen and (min-width: 0px){
+    .about-header{
+        font-size: 35px;
+    }
+}
+
+@media screen and (min-width: 439px){
+    .about-header{
+        font-size: 50px;
+    }
+}
+
+@media screen and (min-width: 545px){
+    .about-header{
+        font-size: 60px;
+    }
+}
+
+@media screen and (min-width: 709px){
+    .about-header{
+        font-size: 70px;
+    }
+}
+
+@media screen and (min-width: 913px){
+    .about-header{
+        font-size: 90px;
+    }
+}
+
+@media screen and (min-width: 1100px){
+    .about-header{
+        font-size: 100px;
+    }
+}
+
+@media screen and (min-width: 1350px){
+    .about-header{
+        font-size: 130px;
+    }
+}
+
+
+@keyframes firstAnim{
+    0%{ transform: translateX(-100vw); }
+    100%{ transform: translateX(20vw); }
+}
+
+@keyframes secondAnim{
+    0%{ transform: translateX(100vw); }
+    100%{ transform: translateX(1vw); }
+}
+
+@keyframes thirdAnim{
+    0%{ transform: translateX(-100vw); color: white; }
+    50%{ transform: translateX(40vw); color: white;}
+    100%{ transform: translateX(40vw);  color: #bf00ff;}
+}

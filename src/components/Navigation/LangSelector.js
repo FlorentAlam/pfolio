@@ -7,8 +7,8 @@ const LangSelector = () => {
 
     return (
         <span>
-            <button style={{fontWeight: (langage === 'fr' ? 'bold' : 'normal')}} onClick={() => changeLang("fr")}>fr</button> | 
-            <button style={{fontWeight: (langage === 'en' ? 'bold' : 'normal')}} onClick={() => changeLang("en")}>en</button>
+            <button className="lang-button" style={{fontWeight: (langage === 'fr' ? 'bold' : 'normal')}} onClick={() => changeLang("fr")}>fr</button> | 
+            <button className="lang-button" style={{fontWeight: (langage === 'en' ? 'bold' : 'normal')}} onClick={() => changeLang("en")}>en</button>
         </span>
     )
 }

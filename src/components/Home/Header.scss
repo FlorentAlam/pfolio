@@ -8,7 +8,61 @@ header{
         font-family: "Kumbh Bold";
         text-transform: uppercase;
         font-weight: bold;
-        font-size: 4em;
         margin: 0;
+    }
+}
+
+@media screen and (min-width: 0px){
+    header{
+        p{
+            font-size: 40px;
+        }
+    }
+}
+
+@media screen and (min-width: 600px){
+    header{
+        p{
+            font-size: 60px;
+        }
+    }
+}
+
+@media screen and (min-width: 760px){
+    header{
+        p{
+            font-size: 70px;
+        }
+    }
+}
+
+@media screen and (min-width: 900px){
+    header{
+        p{
+            font-size: 90px;
+        }
+    }
+}
+@media screen and (min-width: 1024px){
+    header{
+        p{
+            font-size: 95px;
+        }
+    }
+}
+
+@media screen and (min-width: 1580px){
+    header{
+        p{
+            font-size: 110px;
+        }
+    }
+}
+
+@media screen and (min-width: 2000px){
+    header{
+        p{
+            font-size: 150px;
+        }
     }
 }

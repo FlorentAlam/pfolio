@@ -11,6 +11,7 @@ const Contact = () => {
     const [destinataire, setDestinataire] = useState(0);
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
+    const [nom, setNom] = useState('');
 
     useEffect(() => {
         document.title = "Florent Alamachere - Contact";

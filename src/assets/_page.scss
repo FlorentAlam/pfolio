@@ -4,7 +4,7 @@
     width: 100vw;
     // position: fixed;
     top: 0;
-    padding: 3.5em;
+    // padding: 3.5em;
     box-sizing: border-box;
     left: 0;
     animation-delay: .6s;
@@ -18,5 +18,11 @@
     &--show{
         animation-name: AnimShow;
         // transform: translateX(0);
+    }
+}
+
+@media screen and (min-width: 0px){
+    .page{
+        padding: 20px;
     }
 }
