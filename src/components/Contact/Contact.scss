@@ -1,0 +1,22 @@
+#contact{
+    h1{
+        margin: 1em 0;
+        font-size: 3em;
+    }
+    p{
+        width: 80%;
+        font-size: 3em;
+        margin: 0;
+        display: inline;
+    }
+    input{
+        font-size: 1em;
+        background: none;
+        border: none;
+        color: grey;
+        border-bottom: 3px solid cyan;
+    }
+    [type="phone"]{
+        width: 6em;
+    }
+}

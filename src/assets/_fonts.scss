@@ -1,0 +1,39 @@
+@font-face{
+    font-family: "Kumbh Bold";
+    src: url("./fonts/KumbhSans-Bold.ttf") format("truetype");
+}
+
+@font-face{
+    font-family: "Kumbh";
+    src: url("./fonts/KumbhSans-Regular.ttf") format("truetype");
+}
+
+@media screen and (min-width: 1401px){
+    body{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1440px){
+    body{
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    body{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    body{
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 375px){
+    body{
+        font-size: 10px;
+    }
+}

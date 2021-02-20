@@ -1,0 +1,22 @@
+.page{
+    min-height: 100vh;
+    z-index: 8;
+    width: 100vw;
+    // position: fixed;
+    top: 0;
+    padding: 3.5em;
+    box-sizing: border-box;
+    left: 0;
+    animation-delay: .6s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    &--hide{
+        // transform: translateX(-100vw);
+        animation-name: AnimHide;
+    }
+    &--show{
+        animation-name: AnimShow;
+        // transform: translateX(0);
+    }
+}
