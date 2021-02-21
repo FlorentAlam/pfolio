@@ -1,12 +1,14 @@
 .portfolio{
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
     overflow: hidden;
     box-sizing: border-box;
     &__image{
         background-position: center;
         background-size: cover;
+        height: 40vh;
+        margin-bottom: 30px;
     }
     &__item-container{
         position: relative;
@@ -40,23 +42,16 @@
     article{
         position: absolute;
         top: 5em;
-
         left: 3.5em;
-        height: calc(100% - 8.5em);
         width: calc(100% - 7em);
         margin-bottom: 10em;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        // img{
-        //     width: 100%;
-        //     // height: 50vh;
-        // }
-
         div{
             width: 100%;
-            height: 50%;
+            
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -66,7 +61,8 @@
                 text-transform: uppercase;
             }
             .description{
-                text-align: center;
+                text-align: left;
+                white-space: pre-line;
             }
             .tech{
                 span{
@@ -84,9 +80,15 @@
 
 @media screen and (min-width: 700px){
     .portfolio{
+        height: 100vh;
+        &__image{
+            height: 100%;
+            margin-bottom: 0;
+        }
         article{
             flex-direction: row;
             align-items: initial;
+            height: calc(100% - 8.5em);
             div{
                 width: 50%;
                 height: 100%;

@@ -71,7 +71,12 @@ export default {
     },
     portfolio: {
         sokoban: {
-            fr: "Un mini jeu qui se joue sur PC avec son smartphone en guise de manette.",
+            fr: `Sokoban est un mini jeu qui se joue sur PC, on y scanne un QR code à l'aide de son smartphone ou de sa tablette afin de s'en servir comme d'une manette.\n
+             La connexion entre les deux appareils se fait à l'aide de Socket.io qui gère la création de "rooms" au niveau du backend.\n
+             Points clés : \n
+             - Communication en live entre deux appareils\n
+             - Gestion des collisions du personnage\n
+             - Création d'un QR Code`,
             en: "A mini game you play on your computer with your smartphone as a controller."
         },
         weello: {

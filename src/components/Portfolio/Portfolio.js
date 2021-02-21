@@ -8,7 +8,7 @@ import lang from '../../utils/lang';
 const DELTA = 1000;
 
 const projects = [
-    {name: "sokoban", img: sokoban, desc: "Un mini jeu qui se joue sur PC avec son smartphone en guise de manette.", techs: ["Typescript", "Pixi.js", "Socket.io"]},
+    {name: "sokoban", img: sokoban, desc: "Un mini jeu qui se joue sur PC avec son smartphone en guise de manette.", techs: ["Typescript", "Pixi.js", "Socket.io", "NodeJs", "Express"]},
     {name: "weello", img: weello, desc: "Un trello-like", techs: ["React", "Redux", "LocalStorage"]},
     {name: "argonautes", img: weello, desc: "Un projet réalisé dans le cadre l'intégration à la Wild Code School", techs: ["JS", "Node.js", "Express", "Firebase"]}
 ]
