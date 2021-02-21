@@ -1,5 +1,6 @@
 import sokoban from '../../assets/sokoban.jpg';
 import weello from '../../assets/weello.jpg';
+import argonautes from '../../assets/argonaute.jpg';
 
 export const projects = [
     {
@@ -13,14 +14,14 @@ export const projects = [
         name: "weello", 
         img: weello, 
         techs: ["React", "Redux", "LocalStorage"],
-        url: "https://soko-ban.herokuapp.com/",
-        github: "https://github.com/FlorentAlam/soko-ban"
+        url: "https://florentalam.github.io/weello/",
+        github: "https://github.com/FlorentAlam/weello"
     },
     {
         name: "argonautes", 
-        img: weello, 
+        img: argonautes, 
         techs: ["JS", "Node.js", "Express", "Firebase"],
-        url: "https://soko-ban.herokuapp.com/",
-        github: "https://github.com/FlorentAlam/soko-ban"
+        url: "https://les-argonautes-wild.herokuapp.com/",
+        github: "https://github.com/FlorentAlam/Les-argonautes"
     }
 ]

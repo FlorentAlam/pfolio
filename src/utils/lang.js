@@ -95,8 +95,18 @@ export default {
             - Drag and drop implementation`
         },
         argonautes: {
-            fr: "Un projet réalisé dans le cadre de mon intégration à la Wild code school",
-            en: "A project made as part of my integration at the wild code school."
+            fr: `Les Argonautes est un projet réalisé dans le cadre de mon entretien technique dans le but d'intégrer la Wild Code School.\n
+            Les consignes étaient de créer une application web permettant d'établir une liste d'argonautes avec lecture et écriture en base de donnée.\n
+            Points clés:\n
+            - Opération de lecture et d'écriture en base de donnée\n
+            - Utilisation du SDK Admin de Firebase\n
+            - Vérification de la valeur de l'input`,
+            en: `Les Argonautes is a project made as part of my technical interview to integrate Wild Code School.\n
+            The rules were to create a web application where I could establish an argonaute's list with reading and writing on a database.\n
+            Key points:\n
+            - Reading and writing operations on a database\n
+            - Use of Firebase Admin SDK\n
+            - Input validation`
         }
     }
 }

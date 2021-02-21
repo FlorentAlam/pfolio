@@ -8,14 +8,18 @@
         align-items: center;
         justify-content: center;
         a{
-            margin: 0 10px;
+            margin: 0 40px;
             text-decoration: none;
             color: white;
             text-transform: uppercase;
-            font-size: 13px;
-            background: grey;
-            padding: 5px 10px;
-            border-radius: 5px;
+            font-weight: bold;
+            font-size: 24px;
+            font-family: "Kumbh Bold";
+            transition-duration: .3s;
+            transition-timing-function: ease-in-out;
+            &:hover{
+                color: #a235c7;
+            }
         }
     }
     &__image{
