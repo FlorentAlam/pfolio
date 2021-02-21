@@ -15,7 +15,7 @@ const Home = () => {
     }, [])
 
     return (
-    <section className="page home" ref={home}>
+    <section className="home" ref={home}>
         <Header/>
     </section>
 )}

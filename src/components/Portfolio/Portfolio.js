@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import sokoban from '../../assets/sokoban.jpg';
 import weello from '../../assets/weello.jpg';
 import './Portfolio.scss';
@@ -27,6 +27,12 @@ const Portfolio = () => {
             }
         } else if (e.keyCode === 39){
             if(selected < projects.length - 1){
+                setSelected(prevSelected => prevSelected + 1);
+            }
+        } else if(e.keyCode === 9){
+            if(selected === projects.length - 1){
+                setSelected(0);
+            } else {
                 setSelected(prevSelected => prevSelected + 1);
             }
         }
@@ -65,9 +71,9 @@ const Portfolio = () => {
     const onTouchEnd = (e) => {
         if(swipeEndX - minX > swipeStartX || swipeEndX + minX < swipeStartX){
             if(swipeEndX > swipeStartX){
-                setSelected(prevSelected => prevSelected - 1);
-            } else {
-                setSelected(prevSelected => prevSelected + 1);
+                if(selected > 0) setSelected(prevSelected => prevSelected - 1);
+            } else{
+                if(selected < projects.length - 1) setSelected(prevSelected => prevSelected + 1);
             }
             swipeStartX = 0;
             swipeEndX = 0;
@@ -100,7 +106,7 @@ const Portfolio = () => {
                             <p className="description">{lang.portfolio[projet.name][langage.langage]}</p>
                             <p className="tech">
                                 {projet.techs.map((tech, index) => (
-                                    <span>{tech}</span>
+                                    <span key={index}>{tech}</span>
                                 ))}
                             </p>
                         </div>
@@ -109,7 +115,7 @@ const Portfolio = () => {
             </div>
             <div className="portfolio__selected-indicator-container">
                 {projects.map((projet, index) => (
-                    <div onClick={() => setSelected(index)} className={"portfolio__selected-indicator " + (index === selected ? "selected" : "unselected")}>
+                    <div key={index} onClick={() => setSelected(index)} className={"portfolio__selected-indicator " + (index === selected ? "selected" : "unselected")}>
                     </div>
                 ))}
             </div>

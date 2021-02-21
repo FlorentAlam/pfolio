@@ -218,18 +218,18 @@ nav{
     } 
 }
 
-@media screen and (min-width: 600px){
-    .menu{
-        ul{
-            &:first-child{
-                font-size: 30px;
-            }
-            &:not(:first-child){
-                font-size: 90px;
-            }
-        }
-    } 
-}
+// @media screen and (min-width: 600px){
+//     .menu{
+//         ul{
+//             &:first-child{
+//                 font-size: 30px;
+//             }
+//             &:not(:first-child){
+//                 font-size: 90px;
+//             }
+//         }
+//     } 
+// }
 
 @media screen and (min-width: 900px){
     .menu{
