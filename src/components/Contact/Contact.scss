@@ -1,16 +1,11 @@
 #contact{
     h1{
-        margin: 1em 0;
-        // font-size: 3em;
+        margin: 20px 0;
     } 
     p{
-        width: 80%;
-        // font-size: 3em;
-        margin: 0;
         display: inline;
     }
     input{
-        // font-size: 1em;
         background: none;
         border: none;
         color: grey;
@@ -22,10 +17,28 @@
 }
 
 @media screen and (min-width: 0px){
-    #contact{
-        p, input{
-            font-size: 10px;
-        }
+    #contact p, #contact input, .selector{
+        font-size: 20px;
+    }
+    h1{
+        font-size: 40px;
     }
 }
 
+@media screen and (min-width: 575px){
+    #contact p, #contact input, .selector{
+        font-size: 30px;
+    }
+    h1{
+        font-size: 50px;
+    }
+}
+
+@media screen and (min-width: 979px){
+    #contact p, #contact input, .selector{
+        font-size: 40px;
+    }
+    h1{
+        font-size: 60px;
+    }
+}

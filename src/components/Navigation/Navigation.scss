@@ -101,14 +101,8 @@ nav{
                 transition-timing-function: ease-in-out;
                 
             }
-            &:first-child{
-                text-align: center;
-                // padding-top: 1em;
-                // margin-right: 4em;
-            }
             &:not(:first-child){
                 font-weight: bold;
-                // font-size: 4.5em;
             }
         }
     }
@@ -212,9 +206,13 @@ nav{
             align-items: center;
         }
         ul{
+            &:first-child{
+                text-align: center;
+            }
             &:not(:first-child){
                 font-size: 50px;
                 margin-top: 20px;
+                text-align: center;
             }
         }
     } 
@@ -241,8 +239,12 @@ nav{
         }
         ul{
             &:first-child{
+                text-align: right;
                 padding-top: 1em;
                 margin-right: 4em;
+            }
+            &:not(:first-child){
+                text-align: left;
             }
         }
     } 
