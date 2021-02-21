@@ -52,17 +52,15 @@
         justify-content: center;
         div{
             width: 100%;
-            
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            // padding: 0 3em;
             .title{
                 text-transform: uppercase;
             }
             .description{
-                text-align: left;
+                text-align: justify;
                 white-space: pre-line;
                 width: 100%;
             }
@@ -101,6 +99,9 @@
                 padding: 0 3em;
                 .tech{
                     margin-bottom: 0;
+                }
+                .description{
+                    text-align: left;
                 }
             }
         }

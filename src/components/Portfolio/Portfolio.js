@@ -6,6 +6,7 @@ import { LangContext } from '../App/AppProvider';
 import lang from '../../utils/lang';
 
 const DELTA = 1000;
+const minX = 150;
 
 const projects = [
     {name: "sokoban", img: sokoban, desc: "Un mini jeu qui se joue sur PC avec son smartphone en guise de manette.", techs: ["Typescript", "Pixi.js", "Socket.io", "NodeJs", "Express"]},
@@ -48,13 +49,43 @@ const Portfolio = () => {
         
     }
 
+    let swipeStartX = 0;
+    let swipeEndX = 0;
+
+    const onTouchStart = (e) => {
+        let t = e.touches[0];
+        swipeStartX = t.screenX;
+    }
+
+    const onTouchMove = (e) => {
+        let t = e.touches[0];
+        swipeEndX = t.screenX;
+    }
+
+    const onTouchEnd = (e) => {
+        if(swipeEndX - minX > swipeStartX || swipeEndX + minX < swipeStartX){
+            if(swipeEndX > swipeStartX){
+                setSelected(prevSelected => prevSelected - 1);
+            } else {
+                setSelected(prevSelected => prevSelected + 1);
+            }
+            swipeStartX = 0;
+            swipeEndX = 0;
+        }
+    }
+
     useEffect(() => {
         window.addEventListener('keydown', keyboardListener);
         window.addEventListener('mousewheel', scrollListener);
-
+        window.addEventListener('touchstart', onTouchStart);
+        window.addEventListener('touchend', onTouchEnd);
+        window.addEventListener('touchmove', onTouchMove);
         return () => {
             window.removeEventListener('keydown', keyboardListener);
             window.removeEventListener('mousewheel', scrollListener);
+            window.removeEventListener('touchstart', onTouchStart);
+            window.removeEventListener('touchend', onTouchEnd);
+            window.removeEventListener('touchmove', onTouchMove);
         }
     }, [timeSinceLastScroll, selected]);
 
