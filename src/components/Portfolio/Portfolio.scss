@@ -2,7 +2,6 @@
     position: relative;
     min-height: 100vh;
     width: 100vw;
-    overflow: hidden;
     box-sizing: border-box;
     &__image{
         background-position: center;
@@ -18,6 +17,7 @@
         transition-timing-function: ease-in-out;
     }
     &__selected-indicator{
+        
         height: 8px;
         width: 8px;
         border-radius: 5px;
@@ -32,6 +32,7 @@
         right: 3.5em;
         z-index: 4;
         display: flex;
+        
     }
     .selected{
         background: #bf00ff;
@@ -42,8 +43,8 @@
     article{
         position: absolute;
         top: 5em;
-        left: 3.5em;
-        width: calc(100% - 7em);
+        left: 20px;
+        width: calc(100% - 40px);
         margin-bottom: 10em;
         display: flex;
         flex-direction: column;
@@ -56,15 +57,17 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 0 3em;
+            // padding: 0 3em;
             .title{
                 text-transform: uppercase;
             }
             .description{
                 text-align: left;
                 white-space: pre-line;
+                width: 100%;
             }
             .tech{
+                margin-bottom: 50px;
                 span{
                     background: #ffffff55;
                     text-transform: uppercase;
@@ -81,6 +84,7 @@
 @media screen and (min-width: 700px){
     .portfolio{
         height: 100vh;
+        overflow: hidden;
         &__image{
             height: 100%;
             margin-bottom: 0;
@@ -89,9 +93,15 @@
             flex-direction: row;
             align-items: initial;
             height: calc(100% - 8.5em);
+            left: 3.5em;
+            width: calc(100% - 7em);
             div{
                 width: 50%;
                 height: 100%;
+                padding: 0 3em;
+                .tech{
+                    margin-bottom: 0;
+                }
             }
         }
     }
