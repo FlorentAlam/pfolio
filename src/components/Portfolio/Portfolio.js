@@ -1,18 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react';
-import sokoban from '../../assets/sokoban.jpg';
-import weello from '../../assets/weello.jpg';
 import './Portfolio.scss';
 import { LangContext } from '../App/AppProvider';
 import lang from '../../utils/lang';
+import {projects} from './projects';
 
 const DELTA = 1000;
 const minX = 150;
-
-const projects = [
-    {name: "sokoban", img: sokoban, desc: "Un mini jeu qui se joue sur PC avec son smartphone en guise de manette.", techs: ["Typescript", "Pixi.js", "Socket.io", "NodeJs", "Express"]},
-    {name: "weello", img: weello, desc: "Un trello-like", techs: ["React", "Redux", "LocalStorage"]},
-    {name: "argonautes", img: weello, desc: "Un projet réalisé dans le cadre l'intégration à la Wild Code School", techs: ["JS", "Node.js", "Express", "Firebase"]}
-]
 
 const Portfolio = () => {
     const langage = useContext(LangContext);
@@ -100,8 +93,8 @@ const Portfolio = () => {
             <div className="portfolio__item-container" style={{transform: `translateX(${- window.innerWidth * selected}px)`}}>
                 {projects.map((projet, index) => (
                     <article key={index} style={{transform: `translateX(${index * window.innerWidth}px)`}}>
-                        <div className="portfolio__image" style={{backgroundImage: `url(${projet.img})`}}></div>
-                        <div>
+                        <div className="content portfolio__image" style={{backgroundImage: `url(${projet.img})`}}></div>
+                        <div className="content">
                             <h2 className="title">{projet.name}</h2>
                             <p className="description">{lang.portfolio[projet.name][langage.langage]}</p>
                             <p className="tech">
@@ -109,6 +102,10 @@ const Portfolio = () => {
                                     <span key={index}>{tech}</span>
                                 ))}
                             </p>
+                            <div className="project-links">
+                                <a href={projet.url} target="_blank">url</a>
+                                <a href={projet.github} target="_blank">github</a>
+                            </div>
                         </div>
                     </article>
                 ))}

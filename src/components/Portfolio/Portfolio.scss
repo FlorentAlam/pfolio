@@ -3,6 +3,21 @@
     min-height: 100vh;
     width: 100vw;
     box-sizing: border-box;
+    .project-links{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a{
+            margin: 0 10px;
+            text-decoration: none;
+            color: white;
+            text-transform: uppercase;
+            font-size: 13px;
+            background: grey;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+    }
     &__image{
         background-position: center;
         background-size: cover;
@@ -50,7 +65,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        div{
+        .content{
             width: 100%;
             display: flex;
             flex-direction: column;
