@@ -77,11 +77,22 @@ export default {
              - Communication en live entre deux appareils\n
              - Gestion des collisions du personnage\n
              - Création d'un QR Code`,
-            en: "A mini game you play on your computer with your smartphone as a controller."
+            en: `Sokoban is a mini game which is playable on a computer, you have to scan a QR code with the help of your smartphone or tablet to use it as a controller.\n
+            Connexion between both devices is made possible thanks to Socket.io technology which handle room's creation in the backend.\n
+            Key points : \n
+            - Live communication between 2 devices\n
+            - Character collision detection\n
+            - QR code création`
         },
         weello: {
-            fr: "Un trello-like",
-            en: "A trello-like clone"
+            fr: `Trello est un outil de gestion de projet en ligne.\n
+            J'en ai fait une copie partielle utilisant le stockage local pour en enregistrer les données.\n
+            Points clés :\n
+            - Implémentation d'un drag'n drop`,
+            en: `Trello is an online project management tool.\n
+            I've made a partial copy of it, using local storage to save datas.\n
+            Key points :\n
+            - Drag and drop implementation`
         },
         argonautes: {
             fr: "Un projet réalisé dans le cadre de mon intégration à la Wild code school",
