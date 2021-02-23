@@ -18,15 +18,15 @@ app.post('/email', async (req, res) => {
     const { reason, destinataire, to, phone, nom } = req.body;
 
     const mailData = {
-        from: 'Visiteur <youremail@gmail.com>',  // sender address
-        to: 'florentalamachere@yahoo.fr, test@sandbox801b54fa70bd46cebe5530d54452eba1.mailgun.org',   // list of receivers
+        from: 'Visiteur <youremail@gmail.com>',
+        to: 'florentalamachere@yahoo.fr',
         subject: 'Nouveau message depuis portfolio',
         text: `Salut Florent, je m'appelle ${nom} je te contacte parce que j'aimerais ${reason} pour ${destinataire}.
         Tu peux me joindre à l'adresse suivante ${to} ou à ce numéro ${phone}. `
     };
     await mg.messages().send(mailData, (err, body) => {
         if(err){
-            res.send(err);
+            res.send({test: "il y a une erreur"});
         } else res.send("voici le body:", body);
     });
 });
