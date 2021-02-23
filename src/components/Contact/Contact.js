@@ -41,16 +41,21 @@ const Contact = () => {
 
     const sendMail = async () => {
         if(checkInputs()){
+
+            const mailData = {
+                reason: SELECTABLES.subject[subject],
+                destinataire: SELECTABLES.destinataire[destinataire],
+                to: email,
+                phone,
+                nom
+            }
+
+            console.log(mailData);
+
             fetch('/email', {
                 method: 'post',
                 headers: { "Content-Type": "application/json"},
-                body: JSON.stringify({
-                    reason: SELECTABLES.subject[subject],
-                    destinataire: SELECTABLES.destinataire[destinataire],
-                    to: email,
-                    phone,
-                    nom
-                })
+                body: JSON.stringify(mailData)
             }).then(res => {
                 return res.json();
             }).then(result => {
