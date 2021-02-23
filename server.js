@@ -19,7 +19,7 @@ app.post('/email', (req, res) => {
 
     const mailData = {
         from: 'Visiteur <youremail@gmail.com>',  // sender address
-        to: 'test@sandbox801b54fa70bd46cebe5530d54452eba1.mailgun.org',   // list of receivers
+        to: 'florentalamachere@yahoo.fr, test@sandbox801b54fa70bd46cebe5530d54452eba1.mailgun.org',   // list of receivers
         subject: 'Nouveau message depuis portfolio',
         text: `Salut Florent, je m'appelle ${nom} je te contacte parce que j'aimerais ${reason} pour ${destinataire}.
         Tu peux me joindre à l'adresse suivante ${to} ou à ce numéro ${phone}. `
