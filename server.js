@@ -14,7 +14,7 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
-app.post('/email', (req, res) => {
+app.post('/email', async (req, res) => {
     const { reason, destinataire, to, phone, nom } = req.body;
 
     const mailData = {
@@ -24,12 +24,11 @@ app.post('/email', (req, res) => {
         text: `Salut Florent, je m'appelle ${nom} je te contacte parce que j'aimerais ${reason} pour ${destinataire}.
         Tu peux me joindre à l'adresse suivante ${to} ou à ce numéro ${phone}. `
     };
-    res.send({coucou: "test"});
-    // mg.messages().send(mailData, (err, body) => {
-    //     if(err){
-    //         res.send(err);
-    //     } else res.send("voici le body:", body);
-    // });
+    await mg.messages().send(mailData, (err, body) => {
+        if(err){
+            res.send(err);
+        } else res.send("voici le body:", body);
+    });
 });
 
 app.listen(process.env.PORT || 8080, () => {
