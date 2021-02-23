@@ -5,22 +5,10 @@ const path = require('path');
 const mailgun = require('mailgun-js');
 
 const mg = mailgun({apiKey: process.env.MG_API_KEY, domain: process.env.MG_DOMAIN});
-// const nodemailer = require('nodemailer');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'build')));
-
-// const transporter = nodemailer.createTransport({
-//     service: "gmail",
-//     auth: {
-//         user: process.env.MAIL,
-//         pass: process.env.PASSWORD,
-//     },
-//     tls: {
-//         rejectUnauthorized: false
-//     }
-// });
 
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
@@ -37,14 +25,10 @@ app.post('/email', (req, res) => {
         Tu peux me joindre à l'adresse suivante ${to} ou à ce numéro ${phone}. `
     };
     mg.messages().send(mailData, (err, body) => {
-        console.log(body);
-    })
-    // transporter.sendMail(mailData, function (err, info) {
-    //     if(err)
-    //       console.log(err)
-    //     else
-    //       console.log(info);
-    //  });
+        if(err){
+            res.send(err);
+        } else res.send(body)
+    });
 });
 
 app.listen(process.env.PORT || 8080, () => {

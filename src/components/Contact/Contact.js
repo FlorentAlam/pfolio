@@ -39,7 +39,7 @@ const Contact = () => {
         }
     }
 
-    const sendMail = async () => {
+    const sendMail = () => {
         if(checkInputs()){
 
             const mailData = {
@@ -50,13 +50,12 @@ const Contact = () => {
                 nom
             }
 
-            console.log(mailData);
-
             fetch('/email', {
                 method: 'post',
                 headers: { "Content-Type": "application/json"},
                 body: JSON.stringify(mailData)
             }).then(res => {
+                console.log(res);
                 return res.json();
             }).then(result => {
                 console.log(result);
