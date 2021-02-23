@@ -24,13 +24,13 @@ app.get('*', (req, res) => {
 });
 
 app.post('/email', (req, res) => {
-    const { reason, destinataire, to, phone } = req.body;
+    const { reason, destinataire, to, phone, nom } = req.body;
 
     const mailData = {
         from: 'youremail@gmail.com',  // sender address
         to: 'florentalamachere@yahoo.fr',   // list of receivers
         subject: 'Nouveau message depuis portfolio',
-        html: `Salut Florent, je te contacte parce que j'aimerais ${reason} pour ${destinataire}.
+        html: `Salut Florent, je m'appelle ${nom} je te contacte parce que j'aimerais ${reason} pour ${destinataire}.
         Tu peux me joindre à l'adresse suivante ${to} ou à ce numéro ${phone}. `
     };
     transporter.sendMail(mailData, function (err, info) {

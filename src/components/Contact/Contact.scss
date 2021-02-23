@@ -1,4 +1,11 @@
 #contact{
+    .error{
+        display: block;
+        color: crimson;
+        font-size: 18px;
+        margin-top: 20px;
+    }
+    font-family: "Kumbh";
     h1{
         margin: 20px 0;
     } 
@@ -10,9 +17,43 @@
         border: none;
         color: grey;
         border-bottom: 3px solid cyan;
+        margin: 0 5px;
     }
     [type="phone"]{
         width: 6em;
+    }
+    button{
+        font-family: "Kumbh";
+        margin-top: 20px;
+        display: block;
+        background: transparent;
+        padding: 0;
+        border: none;
+        color: black;
+        text-transform: uppercase;
+        position: relative;
+        overflow: hidden;
+        font-size: 18px;
+        &:after, &:before{
+            content: attr(data-content);
+            position: absolute;
+            left: 0;
+            color: white;
+            transition-duration: .3s;
+            transition-timing-function: ease-in-out;
+        }
+        &:after{
+            top: 0;
+        }
+        &:before{
+            top: 100%;
+            font-weight: bold;
+        }
+        &:hover{
+            &:after, &:before{
+                transform: translateY(-100%);
+            }
+        }
     }
 }
 

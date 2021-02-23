@@ -45,8 +45,12 @@ const lang = {
     },
     contact: {
         salut: {
-            fr: "Salut Florent, je te contacte parce que j'aimerais ",
-            en: "Hi Florent, I'm getting in touch because I'd like to "
+            fr: "Salut Florent, je m'appelle ",
+            en: "Hi Florent, I'm "
+        },
+        pourquoi: {
+            fr: ", je te contacte parce que j'aimerais ",
+            en: ", I'm getting in touch with you because I'd like to "
         },
         subject: {
             fr: ["discuter d'un projet", "discuter tout court"],
@@ -67,6 +71,10 @@ const lang = {
         numero: {
             fr: " ou à ce numéro ",
             en: " or at this phone number "
+        },
+        send: {
+            fr: "Envoyer",
+            en: "Send"
         }
     },
     portfolio: {
