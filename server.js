@@ -4,7 +4,7 @@ const app = express();
 const path = require('path');
 const mailgun = require('mailgun-js');
 
-const mg = mailgun({apiKey: process.env.MG_API_KEY, domain: "https://florentalamachere.herokuapp.com/"});
+const mg = mailgun({apiKey: process.env.MG_API_KEY, domain: process.env.MG_DOMAIN});
 // const nodemailer = require('nodemailer');
 
 app.use(bodyParser.json());
