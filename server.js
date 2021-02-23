@@ -26,7 +26,7 @@ app.post('/email', async (req, res) => {
     };
     await mg.messages().send(mailData, (err, body) => {
         if(err){
-            res.send({test: "il y a une erreur"});
+            res.send(err);
         } else res.send("voici le body:", body);
     });
 });
