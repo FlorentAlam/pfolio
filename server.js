@@ -24,11 +24,12 @@ app.post('/email', (req, res) => {
         text: `Salut Florent, je m'appelle ${nom} je te contacte parce que j'aimerais ${reason} pour ${destinataire}.
         Tu peux me joindre à l'adresse suivante ${to} ou à ce numéro ${phone}. `
     };
-    mg.messages().send(mailData, (err, body) => {
-        if(err){
-            res.send(err);
-        } else res.send("voici le body:", body);
-    });
+    res.send({coucou: "test"});
+    // mg.messages().send(mailData, (err, body) => {
+    //     if(err){
+    //         res.send(err);
+    //     } else res.send("voici le body:", body);
+    // });
 });
 
 app.listen(process.env.PORT || 8080, () => {
