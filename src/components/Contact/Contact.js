@@ -17,6 +17,23 @@ const Contact = () => {
         document.title = "Florent Alamachere - Contact";
     }, []);
 
+    const sendMail = async () => {
+        fetch('/email', {
+            method: 'post',
+            headers: { "Content-Type": "application/json"},
+            body: JSON.stringify({
+                reason: subject,
+                destinataire,
+                to: email,
+                phone
+            })
+        }).then(res => {
+            return res.json();
+        }).then(result => {
+            console.log(result);
+        })
+    }
+
     return (
         <main className="page" id="contact">
             <h1>Contact</h1>
@@ -37,6 +54,7 @@ const Contact = () => {
                 { lang.contact.numero[langage.langage]}
                 <input value={phone} type="phone" placeholder="0607080910" onChange={e => setPhone(e.target.value)}/>
             </p>
+            <button onClick={sendMail}>Envoyer</button>
         </main>
 )};
 

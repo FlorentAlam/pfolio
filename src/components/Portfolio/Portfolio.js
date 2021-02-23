@@ -103,8 +103,8 @@ const Portfolio = () => {
                                 ))}
                             </p>
                             <div className="project-links">
-                                <a href={projet.url} target="_blank">url</a>
-                                <a href={projet.github} target="_blank">github</a>
+                                <a href={projet.url} rel="noreferrer" target="_blank">url</a>
+                                <a href={projet.github} rel="noreferrer" target="_blank">github</a>
                             </div>
                         </div>
                     </article>

@@ -1,4 +1,4 @@
-export default {
+const lang = {
     home: {
         header: {
             first: {
@@ -110,3 +110,5 @@ export default {
         }
     }
 }
+
+export default lang;
