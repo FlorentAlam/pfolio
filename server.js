@@ -18,7 +18,7 @@ app.post('/email', (req, res) => {
     const { reason, destinataire, to, phone, nom } = req.body;
 
     const mailData = {
-        from: 'youremail@gmail.com',  // sender address
+        from: 'Visiteur <youremail@gmail.com>',  // sender address
         to: 'florentalamachere@yahoo.fr',   // list of receivers
         subject: 'Nouveau message depuis portfolio',
         text: `Salut Florent, je m'appelle ${nom} je te contacte parce que j'aimerais ${reason} pour ${destinataire}.
@@ -27,7 +27,7 @@ app.post('/email', (req, res) => {
     mg.messages().send(mailData, (err, body) => {
         if(err){
             res.send(err);
-        } else res.send(body)
+        } else res.send("voici le body:", body);
     });
 });
 

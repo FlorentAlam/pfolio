@@ -56,10 +56,7 @@ const Contact = () => {
                 body: JSON.stringify(mailData)
             }).then(res => {
                 console.log(res);
-                return res.json();
-            }).then(result => {
-                console.log(result);
-            })
+            });
         }
     }
 
