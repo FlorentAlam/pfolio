@@ -132,10 +132,10 @@ const lang = {
         },
         firstparagraphe: {
             fr: `Depuis 10 ans maintenant j'ai occupé divers postes dans la vente, que ce soit en tant que vendeur ou en tant que manager.
-            J'opère maintenant à un changement dans ma carrière, pour devenir Concepteur Développeur d'Application.
+            J'opère un changement dans ma carrière, pour devenir Concepteur Développeur d'Application.
             C'est pour ça que je recherche un poste en contrat de professionalisation, à partir du 12 Avril et pour une durée d'un an.
             
-            Ceci dis je n'ai pas attendu pour me former, je suis donc complètement opérationnel avec les technologies suivantes :`,
+            Ceci dit je n'ai pas attendu pour me former, je suis donc complètement opérationnel avec les technologies suivantes :`,
             en: `Since 10 years now I've occupied many roles in retail, from employee to manager. I'm now operating a change in my career, to become an Application Developer.
             That's why I'm looking for an apprenticeship, starting April, 12th for a one year contract.
             
