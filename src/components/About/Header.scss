@@ -32,22 +32,29 @@
     }
 }
 
+.conclusion--active{
+    span:first-child{
+        animation-name: firstAnimConclusion;
+    }
+    span:nth-child(2){
+        animation-name: secondAnimConclusion;
+    }
+    span:nth-child(3){
+        animation-name: thirdAnimConclusion;
+    }
+}
+
 .about-conclusion{
     span:first-child{
         transform: translateX(-100vw);
-        animation-name: firstAnimConclusion;
-        animation-delay: .2s;
     }
     span:nth-child(2){
         transform: translateX(100vw);
-        animation-name: secondAnimConclusion;
-        animation-delay: .4s;
+        animation-delay: .2s;
     }
     span:nth-child(3){
         transform: translateX(-100vw);
-        animation-name: thirdAnimConclusion;
-        animation-delay: .6s;
-        animation-duration: 1s;
+        animation-delay: .4s;
     }
 }
 
