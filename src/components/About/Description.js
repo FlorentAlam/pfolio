@@ -3,6 +3,8 @@ import photo from '../../assets/photo_large_2.jpg';
 import lang from '../../utils/lang';
 import { LangContext } from '../App/AppProvider';
 
+import plaquette from './plaquette.pdf';
+
 const Description = () => {
     const langage = useContext(LangContext);
     return (
@@ -15,9 +17,9 @@ const Description = () => {
             <b>TypeScript</b>, <b>Socket.io</b>, <b>Pixi.js</b>, <b>GSAP</b>, <b>VueJs</b> {lang.about.manyothers[langage.langage]}
             <br/><br/>
             {lang.about.formation[langage.langage]}
-            <b>React</b>, <b>TypeScript</b>, <b>NodeJs</b>, Les <b>méthodes Agile</b>, le <b>déploiement sur le Cloud</b>, les <b>mesures de sécurité</b>,
-
-
+            <b>React</b>, <b>TypeScript</b>, <b>NodeJs</b>, Les <b>méthodes Agile</b>, le <b>déploiement sur le Cloud</b>, les <b>mesures de sécurité</b>.
+            <br/>
+            Vous pourrez trouver la plaquette de la formation ici: <a href={plaquette} download>Plaquette Wild Code School</a>
         </p>
     </div>
 )};
