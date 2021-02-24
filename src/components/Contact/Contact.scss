@@ -1,9 +1,14 @@
 #contact{
-    .error{
+    .error, .success{
         display: block;
-        color: crimson;
         font-size: 18px;
         margin-top: 20px;
+    }
+    .error{
+        color: crimson;
+    }
+    .success{
+        color: yellowgreen;
     }
     font-family: "Kumbh";
     h1{

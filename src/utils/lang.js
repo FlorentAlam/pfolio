@@ -116,6 +116,45 @@ const lang = {
             - Use of Firebase Admin SDK\n
             - Input validation`
         }
+    },
+    about: {
+        whatif: {
+            fr: "Et si",
+            en: "What about"
+        },
+        wework: {
+            fr: "on travaillais",
+            en: "working"
+        },
+        ensemble: {
+            fr: "ensemble",
+            en: "together"
+        },
+        firstparagraphe: {
+            fr: `Depuis 10 ans maintenant j'ai occupé divers postes dans la vente, que ce soit en tant que vendeur ou en tant que manager.
+            J'opère maintenant à un changement dans ma carrière, pour devenir Concepteur Développeur d'Application.
+            C'est pour ça que je recherche un poste en contrat de professionalisation, à partir du 12 Avril et pour une durée d'un an.
+            
+            Ceci dis je n'ai pas attendu pour me former, je suis donc complètement opérationnel avec les technologies suivantes :`,
+            en: `Since 10 years now I've occupied many roles in retail, from employee to manager. I'm now operating a change in my career, to become an Application Developer.
+            That's why I'm looking for an apprenticeship, starting April, 12th for a one year contract.
+            
+            However I haven't waited to train myself, so I'm completely ready to work with the following technologies : `
+        },
+        occasion: {
+            fr: `Et ai déjà eu l'occasion de pratiquer les technologies suivantes :`,
+            en: `And I already had the occasion to work with the following : `
+        },
+        manyothers: {
+            fr: `et bien d'autres.`,
+            en: `and many others.`
+        },
+        formation: {
+            fr: `La formation aura lieu au sein de la Wild Code School pour la délivrance d'un diplôme enregistré au RNCP et qui est équivalent à un Bac+4.
+            Les sujets suivant y seront abordés : `,
+            en: `The scolarship will take place at the Wild Code School which will allow me to graduate for an RNCP diploma equivalent to a Bac+4.
+            The following subjects will be learned :`
+        }
     }
 }
 

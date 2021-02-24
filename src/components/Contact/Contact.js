@@ -21,6 +21,10 @@ const Contact = () => {
         error: false,
         message: ''
     });
+    const [success, setSuccess] = useState({
+        success: false,
+        message: ''
+    });
 
     useEffect(() => {
         document.title = "Florent Alamachere - Contact";
@@ -57,7 +61,25 @@ const Contact = () => {
             }).then(res => {
                 return res.json();
             }).then(data => {
-                console.log(data);
+                if(data.status === 200){
+                    setError({
+                        error: false,
+                        message: ''
+                    });
+                    setSuccess({
+                        success: true,
+                        message: "Votre message a bien été envoyé, je reviens vers vous très vite."
+                    });
+                } else {
+                    setSuccess({
+                        success: false,
+                        message: ''
+                    })
+                    setError({
+                        error: true,
+                        message: "Une erreur s'est produite sur le serveur, veuillez réessayer ultérieurement ou me contacter via florentalamachere@yahoo.fr."
+                    })
+                }
             });
         }
     }
@@ -88,6 +110,7 @@ const Contact = () => {
             </p>
             <button data-content={lang.contact.send[langage.langage]} onClick={sendMail}>{lang.contact.send[langage.langage]}</button>
             {error.error && <p className="error">{error.message}</p>}
+            {success.success && <p className="success">{success.message}</p>}
         </main>
 )};
 
