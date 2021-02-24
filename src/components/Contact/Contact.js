@@ -59,8 +59,10 @@ const Contact = () => {
                 headers: { "Content-Type": "application/json"},
                 body: JSON.stringify(mailData)
             }).then(res => {
+                console.log("res: ", res);
                 return res.json();
             }).then(data => {
+                console.log("data: ", data);
                 if(data.status === 200){
                     setError({
                         error: false,
