@@ -154,6 +154,18 @@ const lang = {
             Les sujets suivant y seront abordés : `,
             en: `The scolarship will take place at the Wild Code School which will allow me to graduate for an RNCP diploma equivalent to a Bac+4.
             The following subjects will be learned :`
+        },
+        alors: {
+            fr: "Alors ?",
+            en: "So ?"
+        },
+        dowe: {
+            fr: "on se",
+            en: "do we"
+        },
+        contact: {
+            fr: "contact ",
+            en: "get in touch "
         }
     }
 }

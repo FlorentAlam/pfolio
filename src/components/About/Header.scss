@@ -1,4 +1,4 @@
-.about-header{
+.about-large-text{
     font-family: "Kumbh Bold";
     text-transform: uppercase;
     font-weight: bold;
@@ -11,79 +11,116 @@
         animation-fill-mode: forwards;
         animation-timing-function: ease-in-out;
     }
+}
+
+.about-header{
     span:first-child{
         transform: translateX(-100vw);
-        animation-name: firstAnim;
+        animation-name: firstAnimHeader;
         animation-delay: .2s;
     }
     span:nth-child(2){
         transform: translateX(100vw);
-        animation-name: secondAnim;
+        animation-name: secondAnimHeader;
         animation-delay: .4s;
     }
     span:nth-child(3){
         transform: translateX(-100vw);
-        animation-name: thirdAnim;
+        animation-name: thirdAnimHeader;
+        animation-delay: .6s;
+        animation-duration: 1s;
+    }
+}
+
+.about-conclusion{
+    span:first-child{
+        transform: translateX(-100vw);
+        animation-name: firstAnimConclusion;
+        animation-delay: .2s;
+    }
+    span:nth-child(2){
+        transform: translateX(100vw);
+        animation-name: secondAnimConclusion;
+        animation-delay: .4s;
+    }
+    span:nth-child(3){
+        transform: translateX(-100vw);
+        animation-name: thirdAnimConclusion;
         animation-delay: .6s;
         animation-duration: 1s;
     }
 }
 
 @media screen and (min-width: 0px){
-    .about-header{
+    .about-large-text{
         font-size: 35px;
     }
 }
 
 @media screen and (min-width: 439px){
-    .about-header{
+    .about-large-text{
         font-size: 50px;
     }
 }
 
 @media screen and (min-width: 545px){
-    .about-header{
+    .about-large-text{
         font-size: 60px;
     }
 }
 
 @media screen and (min-width: 709px){
-    .about-header{
+    .about-large-text{
         font-size: 70px;
     }
 }
 
 @media screen and (min-width: 913px){
-    .about-header{
+    .about-large-text{
         font-size: 90px;
     }
 }
 
 @media screen and (min-width: 1100px){
-    .about-header{
+    .about-large-text{
         font-size: 100px;
     }
 }
 
 @media screen and (min-width: 1350px){
-    .about-header{
+    .about-large-text{
         font-size: 130px;
     }
 }
 
 
-@keyframes firstAnim{
+@keyframes firstAnimHeader{
     0%{ transform: translateX(-100vw); }
     100%{ transform: translateX(20vw); }
 }
 
-@keyframes secondAnim{
+@keyframes secondAnimHeader{
     0%{ transform: translateX(100vw); }
     100%{ transform: translateX(1vw); }
 }
 
-@keyframes thirdAnim{
+@keyframes thirdAnimHeader{
     0%{ transform: translateX(-100vw); color: white; }
     50%{ transform: translateX(40vw); color: white;}
     100%{ transform: translateX(40vw);  color: #a235c7;}
+}
+
+@keyframes firstAnimConclusion{
+    0%{ transform: translateX(-100vw); }
+    100%{ transform: translateX(5vw); }
+}
+
+@keyframes secondAnimConclusion{
+    0%{ transform: translateX(100vw); }
+    100%{ transform: translateX(35vw); }
+}
+
+@keyframes thirdAnimConclusion{
+    0%{ transform: translateX(-100vw);}
+    100%{ transform: translateX(15vw);}
 }

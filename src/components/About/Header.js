@@ -6,7 +6,7 @@ import './Header.scss';
 const Header = () => {
     const langage = useContext(LangContext);
     return (
-        <h1 className="about-header">
+        <h1 className="about-large-text about-header">
             <span>{lang.about.whatif[langage.langage]}</span> 
             <span>{lang.about.wework[langage.langage]}</span>
             <span>{lang.about.ensemble[langage.langage]}</span>
