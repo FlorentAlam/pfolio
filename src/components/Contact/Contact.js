@@ -59,11 +59,7 @@ const Contact = () => {
                 headers: { "Content-Type": "application/json"},
                 body: JSON.stringify(mailData)
             }).then(res => {
-                console.log("res: ", res);
-                return res.json();
-            }).then(data => {
-                console.log("data: ", data);
-                if(data.status === 200){
+                if(res.status === 200){
                     setError({
                         error: false,
                         message: ''
@@ -82,6 +78,7 @@ const Contact = () => {
                         message: "Une erreur s'est produite sur le serveur, veuillez réessayer ultérieurement ou me contacter via florentalamachere@yahoo.fr."
                     })
                 }
+                return res.json();
             });
         }
     }
