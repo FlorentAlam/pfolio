@@ -9,7 +9,7 @@ const Description = () => {
     const langage = useContext(LangContext);
     return (
     <div className="about__description">
-        <img src={photo} alt="Photo de moi"></img>
+        <img src={photo} alt="Moi"></img>
         <p>
             {lang.about.firstparagraphe[langage.langage]}
             <b>HTML</b>, <b>CSS</b>, <b>SCSS</b>, <b>JS</b>, <b>React</b>, <b>NodeJs</b><br/>
