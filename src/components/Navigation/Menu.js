@@ -10,8 +10,8 @@ const Menu = ({isMenuOpen, closeMenu}) => {
         <div id="menu" className={`menu menu--${isMenuOpen ? 'opened' : 'closed'}`}>
             <div>
                 <ul>
-                    <li>Linkedin</li>
-                    <li>github</li>
+                    <li><a href="https://github.com/FlorentAlam/" target="_blank" rel="noreferrer">Github</a></li>
+                    <li><a href="https://www.linkedin.com/in/florent-alamachere/" target="_blank" rel="noreferrer">Linkedin</a></li>
                 </ul>
                 <ul>
                     <li><Link to="/" onClick={closeMenu}>{lang.navigation.home[langage.langage]}</Link></li>

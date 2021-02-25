@@ -56,21 +56,26 @@ nav{
             position: relative;
             text-decoration: none;
             color: rgba(255, 255, 255, .95);
-            &:after{
-                content: '';
-                position: absolute;
-                left: 0;
-                top: calc(50% - 10px);
-                height: 6px;
-                width: 100%;
-                background: rgba(255, 255, 255, .95);
-                transform-origin: left;
-                transform: scaleX(0);
-                transition-duration: .3s;
-                transition-timing-function: ease-out;
-            }
-            &:hover:after{
-                transform: scaleX(1);
+            
+        }
+        ul:nth-child(2){
+            a{
+                &:after{
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: calc(50% - 10px);
+                    height: 6px;
+                    width: 100%;
+                    background: rgba(255, 255, 255, .95);
+                    transform-origin: left;
+                    transform: scaleX(0);
+                    transition-duration: .3s;
+                    transition-timing-function: ease-out;
+                }
+                &:hover:after{
+                    transform: scaleX(1);
+                }
             }
         }
         ul{
